@@ -21,7 +21,7 @@ why
 
 外部依赖
 ============
-
+* `jdk-7u65-linux-x64.rpm` jenkins slave运行需要java，这是oracle官网下载的jdk
 * `jenkins.cli` ~/bin/下jenkins cli接口的封装脚本
 * `~/tmp/jenkins.jar` 与jenkins 交互的 cli 可执行jar
 * `opensuse13.1` [vagrant cloud opensuse-13.1-x86_64 box](https://vagrantcloud.com/berendt/opensuse-13.1-x86_64)
