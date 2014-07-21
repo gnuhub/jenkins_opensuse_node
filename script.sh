@@ -16,3 +16,6 @@ sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 sudo ntpdate cn.pool.ntp.org
 # 安装c c++ 开发工具包 
 sudo zypper -n install patterns-openSUSE-devel_C_C++
+# 创建 root ssh目录
+sudo su - root -c 'mdkir ~/.ssh/'
+sudo su - root -c 'cp -f /vagrant/authorized_keys ~/.ssh/'
