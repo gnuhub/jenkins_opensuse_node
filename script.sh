@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -x
-# 增加kiwi v开发版软件包源
-#sudo zypper --gpg-auto-import-keys  ar -f http://download.opensuse.org/repositories/Virtualization:/Appliances/openSUSE_13.1/ openSUSE-13.1-DEV
-# 删除源
+# 增加kiwi 开发版 软件包源
 sudo zypper rr openSUSE-13.1-DEV
+sudo zypper rr Virtualization_Appliances
+sudo zypper --gpg-auto-import-keys addrepo  http://download.opensuse.org/repositories/Virtualization:Appliances/openSUSE_13.1/Virtualization:Appliances.repo
+sudo zypper mr -p 1 Virtualization_Appliances
+sudo zypper refresh
 # 修改root密码
 sudo su - root -c 'echo "root:gnuhub" | chpasswd'
 # 安装rsync
@@ -23,11 +25,4 @@ sudo zypper -n install patterns-openSUSE-devel_C_C++
 # 创建 root ssh目录
 sudo su - root -c 'mkdir ~/.ssh/'
 sudo su - root -c 'cp -f /vagrant/authorized_keys ~/.ssh/'
-
-# 安装kiwi最新版
-cd /opt
-if ! [ -f kiwi-5.06.132-835.1.x86_64.rpm ];then
-	wget http://download.opensuse.org/repositories/Virtualization:/Appliances/openSUSE_13.1/x86_64/kiwi-5.06.132-835.1.x86_64.rpm
-fi
-sudo zypper -n in /opt/kiwi-5.06.132-835.1.x86_64.rpm
-kiwi --version
+sudo su - root -c 'kiwi --version'
