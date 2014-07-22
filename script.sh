@@ -19,7 +19,7 @@ sudo zypper -n install git
 # 修改时区
 sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 更新时间
-sudo ntpdate cn.pool.ntp.org
+# sudo ntpdate cn.pool.ntp.org
 # 安装c c++ 开发工具包 
 sudo zypper -n install patterns-openSUSE-devel_C_C++
 # 创建 root ssh目录
