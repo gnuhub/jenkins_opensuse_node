@@ -29,5 +29,5 @@ cd /opt
 if ! [ -f kiwi-5.06.132-835.1.x86_64.rpm ];then
 	wget http://download.opensuse.org/repositories/Virtualization:/Appliances/openSUSE_13.1/x86_64/kiwi-5.06.132-835.1.x86_64.rpm
 fi
-sudo zypper -n in kiwi-5.06.132-835.1.x86_64.rpm
+sudo zypper -n in /opt/kiwi-5.06.132-835.1.x86_64.rpm
 kiwi --version
