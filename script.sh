@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 set -x
+# 增加kiwi v开发版软件包源
+sudo zypper --gpg-auto-import-keys  ar -f http://download.opensuse.org/repositories/Virtualization:/Appliances/openSUSE_13.1/ openSUSE-13.1-DEV
 # 修改root密码
 sudo su - root -c 'echo "root:gnuhub" | chpasswd'
 # 安装rsync
