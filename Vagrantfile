@@ -10,7 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "jenkins_opensuse_node_2"
+  # config.vm.box = "jenkins_opensuse_node_2"
+  config.vm.box = "opensuse13.1"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
