@@ -6,3 +6,4 @@ vagrant destroy -f
 vagrant halt -f
 vagrant package --output jenkins_opensuse_node_${BUILD_NUMBER}.box
 jenkins.cli get-job jenkins_opensuse_node > jenkins_opensuse_node.xml
+vagrant box add jenkins_opensuse_node_${BUILD_NUMBER} jenkins_opensuse_node_${BUILD_NUMBER}.box
