@@ -30,4 +30,5 @@ sudo zypper -n install patterns-openSUSE-devel_C_C++
 # 创建 root ssh目录
 sudo su - root -c 'mkdir ~/.ssh/'
 sudo su - root -c 'cp -f /vagrant/authorized_keys ~/.ssh/'
+sudo su - root -c 'cat ~/.ssh/authorized_keys'
 sudo su - root -c 'kiwi --version'
