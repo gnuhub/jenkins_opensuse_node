@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "jenkins_opensuse_node_10"
+  config.vm.box = "jenkins_opensuse_node_12"
   # config.vm.box = "opensuse13.1"
 
   # Disable automatic box update checking. If you disable this, then
@@ -123,7 +123,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   # 在虚拟机内执行脚本 script.sh 用于持续构建
   # http://docs.vagrantup.com/v2/provisioning/shell.html
-  config.vm.provision "shell", path: "script.sh"
+  # config.vm.provision "shell", path: "script.sh"
 
 
 end

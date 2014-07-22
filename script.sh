@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -x
 # 增加kiwi 开发版 软件包源
-sudo zypper rr openSUSE-13.1-DEV
-sudo zypper rr Virtualization_Appliances
+#sudo zypper rr openSUSE-13.1-DEV
+#sudo zypper rr Virtualization_Appliances
 sudo zypper addrepo -G http://download.opensuse.org/repositories/Virtualization:Appliances/openSUSE_13.1/Virtualization:Appliances.repo
 sudo zypper mr -p 1 Virtualization_Appliances
 sudo zypper refresh
