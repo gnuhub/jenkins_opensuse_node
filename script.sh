@@ -9,7 +9,7 @@ sudo zypper refresh
 # 修改root密码
 sudo su - root -c 'echo "root:gnuhub" | chpasswd'
 # 安装rsync
-sudo zypper -n install rsync
+sudo zypper --gpg-auto-import-keys -n install rsync
 # 安装jdk
 sudo zypper -n in /vagrant/jdk-7u65-linux-x64.rpm
 # 安装kiwi
