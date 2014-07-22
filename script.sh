@@ -13,7 +13,7 @@ sudo zypper -n install rsync
 # 安装jdk
 sudo zypper -n in /vagrant/jdk-7u65-linux-x64.rpm
 # 安装kiwi
-sudo zypper -n install kiwi
+sudo zypper -n install --from Virtualization_Appliances --force-resolution kiwi
 # 安装git
 sudo zypper -n install git
 # 修改时区
