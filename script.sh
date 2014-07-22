@@ -3,13 +3,13 @@ set -x
 # 增加kiwi 开发版 软件包源
 sudo zypper rr openSUSE-13.1-DEV
 sudo zypper rr Virtualization_Appliances
-sudo zypper --gpg-auto-import-keys addrepo  http://download.opensuse.org/repositories/Virtualization:Appliances/openSUSE_13.1/Virtualization:Appliances.repo
+sudo zypper addrepo -G http://download.opensuse.org/repositories/Virtualization:Appliances/openSUSE_13.1/Virtualization:Appliances.repo
 sudo zypper mr -p 1 Virtualization_Appliances
 sudo zypper refresh
 # 修改root密码
 sudo su - root -c 'echo "root:gnuhub" | chpasswd'
 # 安装rsync
-sudo zypper --gpg-auto-import-keys -n install rsync
+sudo zypper -n install rsync
 # 安装jdk
 sudo zypper -n in /vagrant/jdk-7u65-linux-x64.rpm
 # 安装kiwi
