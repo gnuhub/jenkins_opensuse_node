@@ -21,6 +21,8 @@ sudo zypper -n install patterns-openSUSE-devel_C_C++
 
 # 安装kiwi
 sudo zypper -n install genisoimage
+# 安装kiwi测试需要的模块 https://github.com/gnuhub/kiwi/issues/6
+sudo zypper -n install perl-Test-Unit-Lite
 sudo zypper addrepo -G http://download.opensuse.org/repositories/Virtualization:Appliances/openSUSE_13.1/Virtualization:Appliances.repo
 sudo zypper mr -p 1 Virtualization_Appliances
 sudo zypper refresh
